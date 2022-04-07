@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @toastsandwich
-- 👀 I’m interested in cybersecurity
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 👀 I’m interested in software development
+- 🌱 I’m currently learning C++
+- 💞️ I’m looking to collaborate on software development
+- 📫 How to reach me instagram : shreyasmali.pvt
 
 <!---
 toastsandwich/toastsandwich is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
