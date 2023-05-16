@@ -1,5 +1,5 @@
 # 💫 About Me:
-I am working on Full Stack Development and CP<br>Working on DP and MERN<br>
+Working on C++20 and DSA<br>
 
 
 ## 🌐 Socials:
