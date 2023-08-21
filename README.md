@@ -1,5 +1,5 @@
 # 💫 About Me:
-Working on C++20 and DSA<br>
+Currently exploring GO Lang<br>
 
 
 ## 🌐 Socials:
