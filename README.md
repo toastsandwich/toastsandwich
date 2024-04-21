@@ -34,6 +34,10 @@ func connect() {
 	fmt.Println(connectWithMe)
 }
 
+func init() {
+	skills.Load()
+}
+
 func main() {
 	introduct()
 	go work()
