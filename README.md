@@ -15,8 +15,10 @@ func introduce() {
 
 func currentWork() {             
 	work.add <- 	`Currently working on :
-			Liver Cirrosis Prediction System using Random Forest as a web application [stack : Golang, HTML, CSS]`
+			 Liver Cirrosis Prediction System using Random Forest
+			 as a web application [stack : Golang, HTML, CSS]`
 	work.done <- struct{}{}
+
 	work.add <-	`Previous Projects :
 			 1. KeyLogger             [stack : C++ and NodeJS]
 			 2. ChatServer 		  [stack : Golang]
