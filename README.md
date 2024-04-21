@@ -33,7 +33,7 @@ func currentWork() *work {
 func connect() {
     connectWithMe := map[toastsandwich.socials]string {
 		Instagram: "this.shrys",
-		LinkedIn: 	"Shreyas Mali",
+		LinkedIn:  "Shreyas Mali",
     }
 	fmt.Println(connectWithMe)
 }
