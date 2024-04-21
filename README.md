@@ -36,6 +36,7 @@ func connect() {
 
 func main() {
 	introduct()
+	go work()
 	for {
 		select <-work.done {
 		case true:
