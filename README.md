@@ -14,13 +14,13 @@ func introduce() {
 }
 
 func currentWork() {             
-	work.add <- 	`Currently working on :
+	work.add <- `Currently working on :
 			 Liver Cirrosis Prediction System using Random Forest
 			 as a web application [stack : Golang, HTML, CSS]`
 	work.done <- struct{}{}
 
-	work.add <-	`Previous Projects :
-			 1. KeyLogger             [stack : C++ and NodeJS]
+	work.add <-`Previous Projects :
+			 1. KeyLogger            [stack : C++ and NodeJS]
 			 2. ChatServer 		  [stack : Golang]
 			 3. Database from scratch [stack : Golang] {incomplete}`
 	work.done <- struct{}{}
@@ -38,7 +38,8 @@ func main() {
 	introduct()
 	go work()
 	for {
-		select <-work.done {
+		_,  ok := <-work.done
+		select ok {
 		case true:
 		// go to next work
 		case false:
