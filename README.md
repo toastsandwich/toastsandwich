@@ -2,6 +2,7 @@
 package main
 
 import (
+    "toastsandwich/experience"
     "toastsandwich/introduction"
     "toastsandwich/skills"
     "toastsandwich/socials"
@@ -35,6 +36,7 @@ func connect() {
 }
 
 func init() {
+	experience.load("intern @TSYS")
 	skills.Load()
 }
 
