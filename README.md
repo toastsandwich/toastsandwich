@@ -2,6 +2,7 @@
 package main
 
 import (
+    "fmt"
     "toastsandwich/experience"
     "toastsandwich/introduction"
     "toastsandwich/skills"
@@ -15,35 +16,40 @@ func introduce() {
 }
 
 func currentWork() {             
-	work.add <- `Currently working on : Completing my degree :_)`
-	work.done <- struct{}{}
+    work.Add <- `Currently working on: Completing my degree :_)`
+    work.Done <- struct{}{} // Signal that the current work is done
 
-	work.add <-`Previous Projects :
-			 1. KeyLogger            [stack : C++ and NodeJS]
-			 2. ChatServer 		  [stack : Golang]
-			 3. Database from scratch [stack : Golang] {incomplete}`
-	work.done <- struct{}{}
+    work.Add <- `Previous Projects:
+        1. KeyLogger            [stack : C++ and NodeJS]
+        2. ChatServer           [stack : Golang]
+        3. Database from scratch [stack : Golang] {incomplete}`
+    work.Done <- struct{}{} // Signal that the project list is done
 }
 
 func connect() {
-    connectWithMe := map[socials.links]string {
-		Instagram: "this.shrys",
-		LinkedIn:  "Shreyas Mali",
+    connectWithMe := map[string]string {
+        "Instagram": "this.shrys",
+        "LinkedIn":  "Shreyas Mali",
     }
-	fmt.Println(connectWithMe)
+    fmt.Println(connectWithMe)
 }
 
 func init() {
-	experience.load("intern @TSYS")
-	skills.Load()
+    experience.Load("intern @TSYS")
+    skills.Load()
 }
 
 func main() {
-	introduct()
-	go work()
-	for {
-		<-work.Done()
-	}
-	connect()
+    introduce()
+
+    // Start working in a goroutine
+    go currentWork()
+
+    // Wait for the work to be done before proceeding
+    <-work.Done
+
+    // After the work is done, proceed to connect
+    connect()
 }
+
 ```
