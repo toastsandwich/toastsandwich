@@ -1,4 +1,4 @@
-```
+```go
 package main
 
 import (
@@ -15,9 +15,7 @@ func introduce() {
 }
 
 func currentWork() {             
-	work.add <- `Currently working on :
-			 Liver Cirrosis Prediction System using Random Forest
-			 as a web application [stack : Golang, HTML, CSS]`
+	work.add <- `Currently working on : Completing my degree :_)`
 	work.done <- struct{}{}
 
 	work.add <-`Previous Projects :
@@ -44,7 +42,7 @@ func main() {
 	introduct()
 	go work()
 	for {
-		_,  ok := <-work.done
+		ok := <-work.done
 		select ok {
 		case true:
 		// go to next work
