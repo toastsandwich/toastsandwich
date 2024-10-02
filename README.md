@@ -20,9 +20,11 @@ func currentWork() {
     work.Done <- struct{}{} // Signal that the current work is done
 
     work.Add <- `Previous Projects:
-        1. KeyLogger            [stack : C++ and NodeJS]
-        2. ChatServer           [stack : Golang]
-        3. Database from scratch [stack : Golang] {incomplete}`
+        1. KeyLogger                  [stack : C++ and NodeJS]
+        2. ChatServer                 [stack : Golang]
+        3. Database from scratch      [stack : Golang] {work in progress}
+        4. LCP                        [stack: HTML, CSS, JS, Golang]
+        5. toastsandwich.snippet.box  [stack: "HTML, CSS, GOHTML, Golang]`
     work.Done <- struct{}{} // Signal that the project list is done
 }
 
@@ -36,7 +38,7 @@ func connect() {
 
 func init() {
     experience.Load("intern @TSYS")
-    skills.Load()
+    skills.Load("golang", "templ", "react", "html", "css", "mysql", "docker")
 }
 
 func main() {
