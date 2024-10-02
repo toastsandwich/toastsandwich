@@ -42,13 +42,7 @@ func main() {
 	introduct()
 	go work()
 	for {
-		ok := <-work.done
-		select ok {
-		case true:
-		// go to next work
-		case false:
-		// do work until complete
-		}
+		<-work.Done()
 	}
 	connect()
 }
