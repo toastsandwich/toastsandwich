@@ -24,20 +24,19 @@ func currentWork() {
         2. ChatServer                 [stack : Golang]
         3. Database from scratch      [stack : Golang] {work in progress}
         4. LCP                        [stack: HTML, CSS, JS, Golang]
-        5. toastsandwich.snippet.box  [stack: "HTML, CSS, GOHTML, Golang]`
-    work.Done <- struct{}{} // Signal that the project list is done
+        5. toastsandwich.snippet.box  [stack: "HTML, CSS, GOHTML, Golang]
+`
 }
 
 func connect() {
     connectWithMe := map[string]string {
-        "Instagram": "this.shrys",
         "LinkedIn":  "Shreyas Mali",
     }
     fmt.Println(connectWithMe)
 }
 
 func init() {
-    experience.Load("intern @TSYS")
+    experience.Load("swe intern @Minio")
     skills.Load("golang", "templ", "react", "html", "css", "mysql", "docker")
 }
 
